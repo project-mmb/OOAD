@@ -13,10 +13,9 @@ public class ChequeAccount extends Account {
     @Override
     public boolean withdraw(double amount) {
         if (amount > 0) {
-            // Calculate the potential new balance
+            
             double potentialBalance = balance - amount;
 
-            // Check if withdrawal is possible without exceeding the overdraft limit
             if (potentialBalance >= -OVERDRAFT_LIMIT) {
                 balance = potentialBalance;
                 return true;

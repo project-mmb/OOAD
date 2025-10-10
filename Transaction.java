@@ -18,33 +18,6 @@ public class Transaction {
         this.postBalance = postBalance;
     }
 
-
-    public String getTransactionId() {
-        return transactionId;
-    }
-
-    public String getAccountNo() {
-        return accountNo;
-    }
-
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public double getPostBalance() {
-        return postBalance;
-    }
-
-    
-
     @Override
     public String toString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

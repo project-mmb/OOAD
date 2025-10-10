@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
+interface Interest {
+    
+    void applyInterest();
+}
+
 public abstract class Account {
     protected final String accountNumber;
     protected double balance;
@@ -16,6 +21,11 @@ public abstract class Account {
 
     public abstract String getAccountType();
 
+
+    public abstract boolean withdraw(double amount);
+
+
+
     public boolean deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -24,27 +34,13 @@ public abstract class Account {
         return false;
     }
 
-    public abstract boolean withdraw(double amount);
-
     public void addTransaction(Transaction transaction) {
         this.transactions.add(transaction);
     }
 
-    // --- Getters ---
 
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public String getCustomerId() {
-        return customerId;
-    }
-
-    public List<Transaction> getTransactions() {
-        return transactions;
-    }
+    public String getAccountNumber() { return accountNumber; }
+    public double getBalance() { return balance; }
+    public String getCustomerId() { return customerId; }
+    public List<Transaction> getTransactions() { return transactions; }
 }

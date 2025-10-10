@@ -1,6 +1,5 @@
-public class SavingsAccount extends Account  {
-    
-    private static final double MIN_BALANCE_THRESHOLD = 100.00;
+public class SavingsAccount extends Account implements Interest {
+    private static final double INTEREST_RATE = 0.035; 
 
     public SavingsAccount(String accountNumber, String customerId, double initialDeposit) {
         super(accountNumber, customerId, initialDeposit);
@@ -13,16 +12,19 @@ public class SavingsAccount extends Account  {
 
     @Override
     public boolean withdraw(double amount) {
+        
         if (amount > 0 && balance >= amount) {
             balance -= amount;
-
-            if (balance < MIN_BALANCE_THRESHOLD) {
-
-                }
             return true;
         }
         return false;
     }
 
-    
+    @Override
+    public void applyInterest() {
+        if (balance > 0) {
+            double interestAmount = balance * INTEREST_RATE;
+            balance += interestAmount;
+        }
+    }
 }
