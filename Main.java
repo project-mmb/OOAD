@@ -53,7 +53,6 @@ public class Main implements Bank, LoginUI {
     @Override
     public boolean performTransaction(Account account, double amount, String type) {
         boolean success = false;
-        double initialBalance = account.getBalance();
         double transactionAmount = amount; 
 
         switch (type.toLowerCase()) {
