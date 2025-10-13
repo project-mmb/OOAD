@@ -103,7 +103,7 @@ public class Main implements Bank, LoginUI {
         System.out.print("Enter Password: ");
         String password = scanner.nextLine().trim();
 
-        Customer customer = findCustomer(customerId); // Uses Bank logic
+        Customer customer = findCustomer(customerId); 
 
         if (customer != null && customer.getPassword().equals(password)) {
             System.out.println("Login successful. Welcome, " + customer.getName() + "!");
@@ -117,7 +117,7 @@ public class Main implements Bank, LoginUI {
     private void showCustomerMenu(Customer customer) {
         boolean running = true;
         while (running) {
-            System.out.println("\n--- Customer Menu: " + customer.getName() + " ---");
+            System.out.println("Customer Menu: " + customer.getName() + " ---");
             System.out.println("1. View Accounts & Balances");
             System.out.println("2. Deposit Money");
             System.out.println("3. Withdraw Money");
