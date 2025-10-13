@@ -188,7 +188,7 @@ public class Main implements Bank, LoginUI {
     }
 
     private void viewAccounts(Customer customer) {
-        System.out.println("\n--- Account Balances ---");
+        System.out.println("Account Balances ---");
         for (Account acc : customer.getAccounts()) {
             System.out.printf("  - %s Account (No: %s): $%.2f%n", acc.getAccountType(), acc.getAccountNumber(), acc.getBalance());
         }
@@ -199,7 +199,7 @@ public class Main implements Bank, LoginUI {
         if (account == null) return;
 
         try {
-            System.out.print("Enter deposit amount: $");
+            System.out.print("Enter deposit amount: P");
             double amount = scanner.nextDouble();
             scanner.nextLine();
             if (amount > 0) performTransaction(account, amount, "Deposit");
@@ -215,7 +215,7 @@ public class Main implements Bank, LoginUI {
         if (account == null) return;
 
         try {
-            System.out.print("Enter withdrawal amount: $");
+            System.out.print("Enter withdrawal amount: P");
             double amount = scanner.nextDouble();
             scanner.nextLine();
             if (amount > 0) performTransaction(account, amount, "Withdraw");
@@ -230,7 +230,7 @@ public class Main implements Bank, LoginUI {
         Account account = selectAccount(customer);
         if (account == null) return;
 
-        System.out.println("\n--- Transactions for Account " + account.getAccountNumber() + " ---");
+        System.out.println("Transactions for Account " + account.getAccountNumber() + " ---");
         List<Transaction> transactions = account.getTransactions();
         if (transactions.isEmpty()) { System.out.println("No transactions found."); return; }
 
