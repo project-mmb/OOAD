@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" styleClass="bg">
+    <top>
+        <HBox spacing="12" styleClass="app-header">
+            <Label text="Fairgrounds Banking" styleClass="brand" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label fx:id="errorLabel" textFill="red" />
+        </HBox>
+    </top>
+    <center>
+        <StackPane>
+            <HBox spacing="24" alignment="CENTER">
+                <padding>
+                    <Insets top="24" right="24" bottom="24" left="24" />
+                </padding>
+                <VBox spacing="14" styleClass="card">
+                    <Label text="Welcome Back" styleClass="card-title" />
+                    <VBox spacing="8">
+                        <HBox spacing="0" styleClass="input-group">
+                            <Label text="👤" styleClass="input-icon" />
+                            <TextField fx:id="loginUsernameField" promptText="Username" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                        <HBox spacing="0" styleClass="input-group">
+                            <Label text="🔒" styleClass="input-icon" />
+                            <PasswordField fx:id="loginPasswordField" promptText="Password" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                    </VBox>
+                    <Button fx:id="loginButton" text="LOGIN" maxWidth="Infinity" styleClass="btn-primary" />
+                </VBox>
+
+                <VBox spacing="14" styleClass="card accent">
+                    <Label text="Create Your Account" styleClass="card-title" />
+                    <GridPane hgap="10" vgap="10">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="35" />
+                            <ColumnConstraints percentWidth="65" />
+                        </columnConstraints>
+                        <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="regUsernameField" promptText="choose a username" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                        <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <PasswordField fx:id="regPasswordField" promptText="create a password" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                        <Label text="Account Holder Type:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <ComboBox fx:id="regClassificationCombo" promptText="Personal or Business" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                        <Label text="Business Name (Business only):" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                        <TextField fx:id="regBusinessNameField" promptText="Legal business name" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                        <Label text="First Name:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                        <TextField fx:id="regFirstNameField" promptText="First name" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+                        <Label text="Last Name:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                        <TextField fx:id="regLastNameField" promptText="Last name" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+                        <Label text="Address:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+                        <TextField fx:id="regAddressField" promptText="Residential address" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+
+                        <Label text="Next of Kin:" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+                        <TextField fx:id="regNextOfKinNameField" promptText="Full name" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+
+                        <Label text="Kin Contact:" GridPane.rowIndex="8" GridPane.columnIndex="0" />
+                        <TextField fx:id="regNextOfKinContactField" promptText="Phone/Email" GridPane.rowIndex="8" GridPane.columnIndex="1" />
+                    </GridPane>
+                    <Button fx:id="registerButton" text="Register" maxWidth="Infinity" styleClass="btn-primary" />
+                </VBox>
+            </HBox>
+        </StackPane>
+    </center>
+</BorderPane>

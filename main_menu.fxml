@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" styleClass="bg">
+    <top>
+        <HBox spacing="12" styleClass="app-header">
+            <Label text="Fairgrounds Banking" styleClass="brand" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label text="Customer:" styleClass="muted" />
+            <Label fx:id="customerLabel" styleClass="bold" />
+        </HBox>
+    </top>
+    <center>
+        <StackPane>
+            <VBox spacing="16" styleClass="card" maxWidth="360">
+                <padding>
+                    <Insets top="24" right="24" bottom="24" left="24" />
+                </padding>
+                <Label text="Main Menu" styleClass="card-title" />
+                <Label text="Select what you would like to do today." />
+                <Button fx:id="accountButton" text="Open Account" maxWidth="Infinity" styleClass="btn-primary" />
+                <Button fx:id="closeAccountButton" text="Close Account" maxWidth="Infinity" styleClass="btn-warn" />
+                <Button fx:id="logoutButton" text="Logout" maxWidth="Infinity" styleClass="btn" />
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>
+

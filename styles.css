@@ -1,0 +1,93 @@
+.bg {
+  -fx-background-color: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+  -fx-font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+.app-header {
+  -fx-background-color: #0a4db3; /* deep bank blue */
+  -fx-padding: 16 20 16 20;
+  -fx-alignment: CENTER_LEFT;
+}
+
+.brand {
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+}
+
+.muted {
+  -fx-text-fill: #eef5ff;
+}
+
+.bold {
+  -fx-text-fill: #0a4db3;
+  -fx-font-weight: bold;
+}
+
+.card {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 10;
+  -fx-padding: 18;
+  -fx-effect: dropshadow(gaussian, rgba(10,77,179,0.15), 14, 0, 0, 8);
+}
+
+.card.accent {
+  -fx-border-color: #0a4db3;
+  -fx-border-width: 1;
+  -fx-border-radius: 10;
+}
+
+.card-title {
+  -fx-font-size: 18px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #0a4db3;
+}
+.input-group {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 8;
+  -fx-border-color: #bfd3ff;
+  -fx-border-radius: 8;
+  -fx-border-width: 1;
+}
+
+.input-icon {
+  -fx-background-color: #0a4db3;
+  -fx-text-fill: white;
+  -fx-padding: 8 10 8 10;
+  -fx-background-radius: 8 0 0 8;
+}
+
+.input-group .text-field, .input-group .password-field {
+  -fx-background-color: transparent;
+  -fx-padding: 8 10 8 10;
+  -fx-background-radius: 0 8 8 0;
+}
+
+.button, .btn {
+  -fx-background-color: #e8eefb;
+  -fx-text-fill: #0a2c66;
+  -fx-background-radius: 8;
+  -fx-padding: 10 16 10 16;
+}
+
+.btn-primary {
+  -fx-background-color: linear-gradient(to right, #1270ff, #0a4db3);
+  -fx-text-fill: white;
+}
+
+.button:hover, .btn:hover {
+  -fx-background-color: #dbe6ff;
+}
+
+.btn-primary:hover {
+  -fx-background-color: linear-gradient(to right, #2a7cff, #0c56c4);
+}
+
+.btn-warn {
+  -fx-background-color: linear-gradient(to right, #ff7a7a, #e43e3e);
+  -fx-text-fill: white;
+}
+
+.text-field, .combo-box {
+  -fx-background-radius: 8;
+}

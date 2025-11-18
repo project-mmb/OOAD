@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" styleClass="bg">
+    <top>
+        <HBox spacing="12" styleClass="app-header">
+            <Label text="Fairgrounds Banking" styleClass="brand" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id="logoutButton" text="Logout" styleClass="btn" />
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="12" styleClass="card">
+            <padding>
+                <Insets top="16" right="16" bottom="16" left="16" />
+            </padding>
+            <Label fx:id="staffWelcomeLabel" styleClass="card-title" text="Staff Dashboard" />
+            <Label text="This is a placeholder staff portal. Add staff workflows here later (e.g., approvals, reports)." />
+        </VBox>
+    </center>
+</BorderPane>
